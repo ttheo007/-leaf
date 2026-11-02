@@ -4,7 +4,7 @@ A tiny client-side Fabric mod for **Minecraft Java 26.3**.
 
 ## Command
 
-- `/leaf` — disconnects from the current multiplayer server and returns to the title screen.
+- `/leaf` — leaves the current world or server and returns to the appropriate menu.
 - If you are not connected to a server, it displays a short message instead.
 
 Leaf registers the command on the client. It does not need to be installed on the server and does not require operator permissions.
