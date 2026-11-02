@@ -14,12 +14,12 @@ public final class LeafClient implements ClientModInitializer {
                 Minecraft client = Minecraft.getInstance();
 
                 if (client.getConnection() != null) {
-                    client.getConnection().getConnection().disconnect(
-                        Component.literal("Disconnected using /leaf")
-                    );
+                    // Use Minecraft's own world-disconnect flow so the client
+                    // returns to the correct menu and cleans up the session.
+                    client.disconnectFromWorld(Component.literal("Disconnected using /leaf"));
                 } else {
                     context.getSource().sendFeedback(
-                        Component.literal("You are not connected to a server.")
+                        Component.literal("You are not connected to a world or server.")
                     );
                 }
 
