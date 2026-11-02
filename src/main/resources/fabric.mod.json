@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "leaf",
+  "version": "${version}",
+  "name": "Leaf",
+  "description": "Adds the client-side /leaf command to disconnect from the current server.",
+  "authors": ["ttheo007"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.ttheo.leaf.LeafClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
